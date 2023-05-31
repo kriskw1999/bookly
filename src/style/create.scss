@@ -1,0 +1,82 @@
+@import "variables";
+
+.edit-container, .create-container {
+  padding: 50px;
+  max-width: 500px;
+
+  @media (max-width: $breakpoint-small) {
+    padding: 20px;
+  }
+}
+
+button.go-home {
+  border-radius: $border-radius-medium;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: $font-size-small;
+  color: white;
+  background-color: transparent;
+  border: none;
+  transition: background-color .2s ease-in-out;
+  margin-bottom: 20px;
+
+  img {
+    width: 32px;
+  }
+
+  &:hover {
+    background-color: rgba($glass-light-color, .5);
+  }
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  button {
+    background-color: $primary-color;
+    border-radius: $border-radius-medium;
+    color: white;
+    font-size: $font-size-small;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    justify-self: baseline;
+    align-self: self-end;
+
+    &:hover {
+      background-color: $primary-light-color;
+    }
+
+    &:active {
+      background-color: $primary-dark-color;
+    }
+  }
+
+  .boolean-input {
+    color: white;
+    font-size: $font-size-small;
+  }
+}
+
+input[type="text"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  outline: none;
+  transition: box-shadow 0.3s ease;
+
+  &:focus {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+
+  &::placeholder {
+    color: #aaa;
+  }
+}

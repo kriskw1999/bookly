@@ -1,0 +1,58 @@
+@import "variables";
+@import "list";
+@import "create";
+@import "drawer";
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  height: 100vh;
+  background-image: linear-gradient(rgba(53, 49, 49, .9), rgba(35, 32, 32, .9)), url("../assets/rainy_book.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  overflow: auto;
+}
+
+header {
+  height: 80px;
+  background-color: rgba($primary-color, .8);
+  display: flex;
+  align-items: center;
+  padding: 0 120px;
+  font-size: $font-size-large;
+  color: white;
+
+  @media (max-width: $breakpoint-medium) {
+    justify-content: center;
+  }
+
+  & .site-logo {
+    height: 48px;
+    width: 48px;
+    margin-right: 20px;
+  }
+}
+
+.layout {
+  padding: 60px 120px;
+
+  @media (max-width: $breakpoint-medium) {
+    padding: 60px 60px;
+  }
+
+  @media (max-width: $breakpoint-small) {
+    padding: 60px 20px;
+  }
+}
+
+.glass-card {
+  box-shadow: 0 4px 30px rgba(0, 0, 0, .1);
+  backdrop-filter: blur(5px);
+  background-color: rgba($glass-color, .3);
+  border-radius: $border-radius-medium;
+}

@@ -1,0 +1,154 @@
+@import "variables";
+
+.list-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  & .upper-section {
+    min-width: 100%;
+    display: flex;
+    gap: 12px;
+  }
+
+  & .filters-container {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 12px;
+    color: white;
+    cursor: pointer;
+
+    & img {
+      height: 20px;
+    }
+  }
+
+  & .add-element-btn {
+    background-color: $primary-color;
+    border-radius: $border-radius-medium;
+    color: white;
+    font-size: $font-size-small;
+    border: none;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    padding: 12px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $primary-light-color;
+    }
+
+    &:active {
+      background-color: $primary-dark-color;
+    }
+
+    img {
+      height: 16px;
+      width: 16px;
+    }
+  }
+
+  & .book-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px;
+    max-width: calc(100% / 4 - 15px);
+    flex: 1 0 21%;
+    padding: 20px;
+    box-sizing: border-box;
+    color: white;
+
+    @media (max-width: $breakpoint-medium) {
+      flex: 1 0 33%;
+      max-width: calc(100% / 2 - 10px);
+    }
+
+    @media (max-width: $breakpoint-small) {
+      flex: 1 0 100%;
+      max-width: 100%;
+    }
+
+    & .title {
+      font-size: $font-size-medium;
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+
+    & .author {
+      font-size: $font-size-x-small;
+      margin-bottom: 8px;
+    }
+
+    & .description {
+      font-size: $font-size-small;
+      margin-bottom: 10px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 12;
+      -webkit-box-orient: vertical;
+
+    }
+
+    & .stars-container {
+      display: flex;
+      gap: 2px;
+      margin-bottom: 10px;
+    }
+
+    & .title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    & .heart-container {
+      padding: 12px;
+      width: 10px;
+      height: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba($glass-color, .5);
+      border-radius: 50%;
+      cursor: pointer;
+
+
+      &:hover {
+        background-color: rgba($glass-light-color, .5);
+      }
+    }
+
+    & .actions {
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      gap: 12px;
+
+      & button {
+        background-color: $primary-color;
+        border-radius: $border-radius-medium;
+        color: white;
+        font-size: $font-size-small;
+        border: none;
+        padding: 12px;
+        cursor: pointer;
+        justify-self: baseline;
+        align-self: self-end;
+
+        &:hover {
+          background-color: $primary-light-color;
+        }
+
+        &:active {
+          background-color: $primary-dark-color;
+        }
+      }
+    }
+  }
+}
+
