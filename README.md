@@ -19,3 +19,6 @@ Then to run the app you have to:
     yarn install
     yarn dev
     ```
+
+## Design
+I have designed the main part of the application in https://www.figma.com/file/Oq5cFZGSciN6jubun6yYWQ/Book-site?type=design&node-id=20-24&t=Ek5KqcTOAYa3jvSI-0
